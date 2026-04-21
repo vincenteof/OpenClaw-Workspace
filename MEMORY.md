@@ -1,5 +1,16 @@
 # MEMORY.md - Long-term Memory
 
+## Obsidian Vault 结构
+
+- `000 - Indexes`：主题索引
+- `200 - Material`：收藏的有价值资料
+- `300 - Daily Notes`：每日随想，人生/成长短思考，内容素材
+- `400 - Zettelkasten`：灵感集和学习笔记，内容创作原材料
+- `980 - Task Management`：todo 归集视图（Dataview 视图，不是存放 todo 的地方）
+- `999 - Templates`：笔记模板
+
+---
+
 ## Obsidian 操作规范
 
 ### 新建笔记
