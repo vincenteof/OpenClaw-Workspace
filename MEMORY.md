@@ -35,3 +35,33 @@ Tags:
 
 - **Obsidian vault:** `/Users/vincenteofchen/Documents/vincenteof-obsidian`
 - **Workspace:** `/Users/vincenteofchen/OpenClaw-Workspace`
+
+---
+
+## 投资组合系统（Obsidian）
+
+### 目录结构
+```
+970 - Investments/
+├── 971 - Portfolio/
+│   ├── Dashboard.md          # 日常查看入口（嵌入 Bases）
+│   └── Portfolio.base        # Bases 数据库，含公式列和表格视图
+├── 972 - Assets/             # 每个持仓资产一个笔记（SYMBOL.md）
+├── 973 - Transactions/
+│   └── Transaction-Log.md    # 交易流水日志（Markdown 表格）
+└── Instructions.md           # OpenClaw 操作规范（必读）
+```
+
+### 收到交易指令时
+**必须先读取** `970 - Investments/Instructions.md`，然后按规范执行：
+1. 解析字段，有歧义先确认
+2. 更新 `972 - Assets/<SYMBOL>.md` 的 YAML
+3. 追加记录到 `973 - Transactions/Transaction-Log.md`
+4. git commit & push
+5. 回复变更摘要
+
+### 关键规则
+- avg_cost：买入用加权平均法，卖出不变，拆股按比例调整
+- 新资产没有笔记时，先询问用户确认再创建
+- 资产笔记文件名 = symbol 全大写（如 `AAPL.md`、`TSLA.md`）
+- vault 是 git 仓库，每次操作后 commit & push
